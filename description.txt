@@ -1,0 +1,29 @@
+Challenges faced: I tried installing open sora on various systems though it was not easy and at the end when i launched it, it did'nt work out always asked about if i had Nvidia graphics driver,
+for this reason i left open sora and, switched to stable-diffusion for generating frames of my image for video and finally integrated it with gradio UI by combining each frame using moviepy and display it on gradio UI.
+
+To create the "Surrealism/Cubism/Impressionism Art Video Generator,
+
+" I leveraged the Stable Diffusion model for generating artistic images based on uploaded image and text prompts. I combined this with Gradio for the user interface and MoviePy for video creation from the generated images. 
+
+
+
+The project was divided into four components:
+
+1. Setting up the model:
+
+->The model works on a pretrained model stablediffusion for generating image frames.
+
+->After it the model is set to load on to the gpu for better performance and faster processing using  (pipe.to("cuda"))
+
+2. Generation of Image:
+
+Based on the style prompt and input image the model. The function utilizes the Stable Diffusion pipeline, tweaking guidance scale.
+
+3.Video Creation:
+
+The create_video() function generates a sequence of frames with gradual transitions between styles (surrealism, cubism, impressionism) from prompt and integrates them into a video. 
+
+4.Gradio Integration:
+
+I used Gradio to create a simple web interface where users can upload an image and provide a style prompt.
+
