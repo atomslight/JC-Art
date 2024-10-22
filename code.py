@@ -25,7 +25,7 @@ def generate_frame(prompt, input_image, strength=0.75):
     return np.array(image)  # Convert to numpy array for further processing
 
 # Function to create a surrealism/cubism/impressionism-inspired video from an input image
-def create_video(image, style_prompt, output_path='video.mp4', num_frames=50):
+def create_video(image, style_prompt, output_path='video.mp4'):
     # Prepare a list of prompts that alternate between surrealism, cubism, and impressionism
     styles = ['surrealism', 'cubism', 'impressionism']
     prompts = [f"{style_prompt}, {i}% dreamlike painting" for i in range(10, 110, 10)]
